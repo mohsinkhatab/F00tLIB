@@ -62,7 +62,7 @@
                 android:textAlignment="center"
                 android:text="ONE STEP CHECKOUT"
                 android:textColor="#063249"
-                android:textSize="20sp" />
+                android:textSize="22sp" />
             <!--<view-->
             <!--android:layout_width="match_parent"-->
             <!--android:layout_height="1dp"-->
@@ -324,7 +324,7 @@ android:background="@drawable/border"
                 android:textStyle="bold"
                 android:textColor="#063249"
 
-                android:textSize="20sp" />
+                android:textSize="22sp" />
 
             <TextView
                 android:layout_width="match_parent"
