@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#d0d4cd"
+
+    android:fillViewport="false">
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#c3c6c1"
+
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"
+
+            >
+
+        </include>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+
+                android:layout_marginTop="10dp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/newin" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+
+                android:layout_marginTop="10dp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/casual" />
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/formal" />
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/sandals" />
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/saless" />
+
+<include
+    layout="@layout/footer"/>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+    <!--<Button-->
+        <!--android:id="@+id/whatsapp"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+
+        <!--android:layout_marginEnd="16dp"-->
+        <!--android:backgroundTint="#fff"-->
+
+        <!--android:src="@drawable/whatsap"-->
+        <!--android:layout_marginRight="16dp" />-->
+        <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+        <!--android:layout_marginRight="16dp" />-->
+
+
+    <!--<Button-->
+        <!--android:id="@+id/facebook"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+
+
+        <!--android:layout_marginBottom="30dp"-->
+
+
+        <!--android:layout_marginStart="16dp"-->
+        <!--android:backgroundTint="#fff"-->
+        <!--android:src="@drawable/faceeee"-->
+        <!--android:layout_marginLeft="16dp" />-->
+        <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+        <!--android:layout_marginLeft="16dp" />-->
+
+</LinearLayout>

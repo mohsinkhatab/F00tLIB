@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/Home"
+            android:icon="@drawable/homepage"
+            android:title="Home" />
+
+        <!--<item-->
+            <!--android:id="@+id/Store"-->
+            <!--android:icon="@drawable/store"-->
+            <!--android:title="Store" />-->
+        <item
+            android:id="@+id/Categories"
+
+            android:icon="@drawable/category"
+            android:title="Categories" />
+        <item
+            android:id="@+id/Cart"
+            android:title="My Cart"
+            android:icon="@drawable/shoppinggg"/>
+        <item
+            android:id="@+id/web"
+            android:title="WebSite"
+            android:icon="@drawable/interrr"/>
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/Whatsapp"
+                android:icon="@drawable/whatsap"
+                android:title="Whatsapp" />
+
+            <item
+                android:id="@+id/Innovators"
+                android:icon="@drawable/logan"
+
+                android:title="INNOVATORS" />
+        </menu>
+    </item>
+
+</menu>

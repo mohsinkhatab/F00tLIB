@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f8fcf5"
+
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/toolbar"
+
+            android:id="@+id/toolbar" />
+    </LinearLayout>
+    <!-- TODO: Update blank fragment layout -->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:background="@color/black"-->
+    <!--android:layout_height="1dp"/>-->>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:background="#c7c5c2">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/title"
+
+
+
+            android:textColor="#fff"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border1"
+
+            android:textAllCaps="true"
+            android:text="Category" />
+
+
+        <ImageView
+            android:id="@+id/sandalmen"
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+
+            android:layout_marginTop="30dp"
+
+            android:scaleType="centerCrop"
+            android:src="@drawable/sadlemen"
+            />
+
+        <ImageView
+            android:id="@+id/sandalwomen"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+
+
+            android:layout_marginTop="20dp"
+
+            android:scaleType="centerCrop"
+            android:src="@drawable/sadlewomen"
+            />
+        <include
+            layout="@layout/footer"/>
+    </LinearLayout>
+    </ScrollView>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/whatsapp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_marginBottom="65dp"
+        android:layout_marginEnd="16dp"
+
+        android:backgroundTint="#fff"
+        android:src="@drawable/whatsap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="16dp" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fb"
+        android:layout_width="50dp"
+        android:layout_height="53dp"
+
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="65dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#fff"
+        android:src="@drawable/faceeee"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="16dp" />
+</android.support.constraint.ConstraintLayout>

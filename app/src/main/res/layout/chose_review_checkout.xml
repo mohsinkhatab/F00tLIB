@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+android:weightSum="2"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:text="Shop More"
+        android:id="@+id/shop"
+        android:background="@drawable/border1"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/gotham_book"
+
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/chek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border1"
+        android:fontFamily="@font/gotham_book"
+
+        android:layout_marginTop="5dp"
+
+        android:text="Go to Cart"
+        android:textStyle="bold"
+
+
+        android:textColor="#fff" />
+</LinearLayout>
