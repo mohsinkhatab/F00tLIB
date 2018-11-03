@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#f8fcf5"
-
+android:id="@+id/cons"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <include
-            layout="@layout/toolbar"
 
-            android:id="@+id/toolbar" />
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+
+
+            layout="@layout/toolbar"
+            android:id="@+id/sandaltool"/>
     </LinearLayout>
     <!-- TODO: Update blank fragment layout -->
 
@@ -20,58 +28,65 @@
     <!--android:layout_width="match_parent"-->
     <!--android:background="@color/black"-->
     <!--android:layout_height="1dp"/>-->>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-android:layout_marginTop="60dp"
-        android:orientation="vertical"
-        android:background="#c7c5c2">
-        <TextView
+        android:layout_height="0dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <LinearLayout
+            android:id="@+id/lay"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/title"
+            android:layout_height="match_parent"
+
+            android:layout_below="@+id/toolbar"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
 
 
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border1"
+                android:gravity="center"
+                android:text="Category"
+                android:textAllCaps="true"
+                android:textColor="#fff"
 
-            android:textColor="#fff"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/border1"
-
-            android:textAllCaps="true"
-            android:text="Category" />
-
-
-        <ImageView
-            android:id="@+id/sandalmen"
-            android:layout_width="match_parent"
-            android:layout_height="190dp"
-
-            android:layout_marginTop="30dp"
-
-            android:scaleType="centerCrop"
-            android:src="@drawable/sadlemen"
-            />
-
-        <ImageView
-            android:id="@+id/sandalwomen"
-            android:layout_width="match_parent"
-            android:layout_height="190dp"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
 
-            android:layout_marginTop="20dp"
+            <ImageView
+                android:id="@+id/sandalmen"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
 
-            android:scaleType="centerCrop"
-            android:src="@drawable/sadlewomen"
-            />
-        <include
-            layout="@layout/footer"/>
-    </LinearLayout>
+                android:layout_marginTop="30dp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/sadlemen" />
+
+            <ImageView
+                android:id="@+id/sandalwomen"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+
+
+                android:layout_marginTop="20dp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/sadlewomen" />
+
+            <include layout="@layout/footer" />
+        </LinearLayout>
     </ScrollView>
 
     <android.support.design.widget.FloatingActionButton
@@ -79,14 +94,13 @@ android:layout_marginTop="60dp"
         android:layout_width="50dp"
         android:layout_height="50dp"
 
-        android:layout_marginBottom="76dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="510dp"
+        android:layout_marginEnd="8dp"
 
         android:backgroundTint="#fff"
         android:src="@drawable/whatsap"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginRight="16dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
     <android.support.design.widget.FloatingActionButton
@@ -95,11 +109,10 @@ android:layout_marginTop="60dp"
         android:layout_height="50dp"
 
 
-        android:layout_marginBottom="76dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginBottom="68dp"
+        android:layout_marginStart="317dp"
         android:backgroundTint="#fff"
         android:src="@drawable/faceeee"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="16dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

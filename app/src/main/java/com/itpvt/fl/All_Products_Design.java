@@ -140,7 +140,7 @@ int[] images={  R.drawable.baner, R.drawable.banneer, R.drawable.bannerr};
             @Override
             public void onClick(View v) {
 //
-                String smsNumber = "+923113668542";
+                String smsNumber = "923113668542";
 
                 Intent sendIntent = new Intent("android.intent.action.MAIN");
                 sendIntent.setComponent(new ComponentName("com.whatsapp", "com.whatsapp.Conversation"));

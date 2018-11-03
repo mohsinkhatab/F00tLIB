@@ -11,9 +11,10 @@
         android:layout_height="wrap_content">
 
         <include
-            android:id="@+id/toolbar"
 
-            layout="@layout/toolbar" />
+
+            layout="@layout/toolbar"
+            android:id="@+id/catetoolbar"/>
     </LinearLayout>
             <Button
                 android:layout_marginTop="20dp"

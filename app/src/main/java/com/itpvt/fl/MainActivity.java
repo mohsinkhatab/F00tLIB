@@ -4,6 +4,7 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -25,8 +26,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
     ImageView insta;
-    ImageView whatsapp;
-    Button facebook;
+    FloatingActionButton whatsapp;
+   FloatingActionButton facebook;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,10 +43,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        TextView textView=(TextView)findViewById(R.id.textView4) ;
-//        facebook=(Button) findViewById(R.id.facebook);
+        facebook=(FloatingActionButton) findViewById(R.id.fb);
         ImageView img1 = (ImageView) findViewById(R.id.img1);
 //        insta= (ImageView) findViewById(R.id.insta);
-//        whatsapp=(ImageView) findViewById(R.id.whatsapp);
+        whatsapp=(FloatingActionButton) findViewById(R.id.whatsapp);
         //  sliderLayout = (SliderLayout) findViewById(R.id.slider);
 
 //
@@ -69,20 +70,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-//        whatsapp.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                Uri uri  = Uri.parse("smsto:"+"+923000225587");
-//                Intent intent =new Intent(Intent.ACTION_SENDTO,uri);
-//                intent.setPackage("com.whatsapp");
-//
-//                startActivity(intent);
-//
-//
-//            }
-//
-//        });
+        whatsapp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String smsNumber = "923113668542";
+
+                Intent sendIntent = new Intent("android.intent.action.MAIN");
+                sendIntent.setComponent(new ComponentName("com.whatsapp", "com.whatsapp.Conversation"));
+                sendIntent.putExtra("jid", PhoneNumberUtils.stripSeparators(smsNumber) + "@s.whatsapp.net");//phone number without "+" prefix
+                startActivity(sendIntent);
+
+
+            }
+
+        });
 
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,14 +109,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-//        facebook.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/footlib/"));
-////footlib_ready_to_wear
-//                startActivity(myIntent);
-//            }
-//        });
+        facebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/footlib/"));
+//footlib_ready_to_wear
+                startActivity(myIntent);
+            }
+        });
 //        textView.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -232,7 +234,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         } else if (id == R.id.Whatsapp)
         {
-            String smsNumber = "+923113668542";
+            String smsNumber = "923113668542";
 
             Intent sendIntent = new Intent("android.intent.action.MAIN");
             sendIntent.setComponent(new ComponentName("com.whatsapp", "com.whatsapp.Conversation"));

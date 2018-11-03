@@ -66,8 +66,7 @@ public class My_Cart extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(My_Cart.this, MainActivity.class);
-                startActivity(intent);
+               onBackPressed();
             }
         });
 ////        ImageView whatsapp=(ImageView) findViewById(R.id.whatsapp);
@@ -200,7 +199,11 @@ finish();
         requestQueue.add(request);
     }
 
-
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent(My_Cart.this,MainActivity.class);
+        startActivity(intent);
+    }
 
 
 }

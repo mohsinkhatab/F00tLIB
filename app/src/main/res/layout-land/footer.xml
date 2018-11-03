@@ -7,26 +7,26 @@
     android:weightSum="2"
     android:paddingTop="10dp"
 
-    android:background="#c7c5c2"
+    android:background="#fff"
     android:paddingBottom="10dp"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="150dp"
-        android:layout_height="90dp"
+    <!--<TextView-->
+        <!--android:id="@+id/textView3"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="90dp"-->
 
-        android:layout_marginEnd="190dp"
-        android:layout_marginStart="220dp"
-        android:background="@drawable/footer"
-        android:textAlignment="center"
-        android:textAllCaps="true"
+        <!--android:layout_marginEnd="190dp"-->
+        <!--android:layout_marginStart="220dp"-->
+        <!--android:background="@drawable/footer"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textAllCaps="true"-->
 
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
 
     <LinearLayout
         android:id="@+id/footer"

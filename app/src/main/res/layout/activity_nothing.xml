@@ -7,7 +7,8 @@
 
     >
 
-<include layout="@layout/toolbar" />
+<include layout="@layout/toolbar"
+    android:id="@+id/nothtool"/>
 
 
     <TextView

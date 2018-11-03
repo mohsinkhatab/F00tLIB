@@ -276,17 +276,18 @@ count=(EditText)findViewById(R.id.couuu);
                     done.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-
+                            SharedPreferences settings = Check_Out.this.getSharedPreferences(Config.SHARED_PREF_CART, Context.MODE_PRIVATE);
+                            settings.edit().clear().commit();
                            //Getting out sharedpreferences
-                           SharedPreferences preferences = getSharedPreferences(Config.SHARED_PREF_CART_NO, Context.MODE_PRIVATE);
-                           //Getting editor
-                           SharedPreferences.Editor editor = preferences.edit();
-
-////                            //Putting blank value to email
-                           editor.putString(Config.SHARED_PREF_CART_NO, null);
-                           editor.clear();
-                           editor.apply();
-                           SharedPreferences settings = Check_Out.this.getSharedPreferences(Config.SHARED_PREF_CART, Context.MODE_PRIVATE);
+//                           SharedPreferences preferences = getSharedPreferences(Config.SHARED_PREF_CART_NO, Context.MODE_PRIVATE);
+//                           //Getting editor
+//                           SharedPreferences.Editor editor = preferences.edit();
+//
+//////                            //Putting blank value to email
+//                           editor.putString(Config.SHARED_PREF_CART_NO, null);
+//                           editor.clear();
+//                           editor.apply();
+//                           SharedPreferences settings = Check_Out.this.getSharedPreferences(Config.SHARED_PREF_CART, Context.MODE_PRIVATE);
                            Intent intent =new Intent(Check_Out.this,MainActivity.class);
                            startActivity(intent);
                         }

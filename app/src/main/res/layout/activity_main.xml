@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,32 +9,40 @@
 
     android:fillViewport="false">
     >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:background="#c3c6c1"
 
-        android:layout_height="wrap_content">
-        <include layout="@layout/toolbar"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:background="#fff">
+
+        <include
+            layout="@layout/toolbar"
+            android:id="@+id/maintool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
             android:layout_alignParentLeft="true"
 
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent">
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
 
         </include>
     </LinearLayout>
+
     <ScrollView
         android:id="@+id/scrolll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
 
 
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
+        tools:ignore="MissingConstraints">
+
         <LinearLayout
             android:layout_width="match_parent"
 
@@ -59,37 +68,66 @@
 
                 android:scaleType="centerCrop"
                 android:src="@drawable/casual" />
+
             <ImageView
                 android:id="@+id/img3"
                 android:layout_width="match_parent"
-                android:layout_height="190dp"
+                android:layout_height="210dp"
                 android:layout_marginTop="10dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/formal" />
+
             <ImageView
                 android:id="@+id/img4"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
 
-                android:scaleType="centerCrop"
                 android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
                 android:src="@drawable/sandals" />
+
             <ImageView
                 android:id="@+id/img5"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="210dp"
                 android:layout_marginTop="10dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/saless" />
 
-<include
-    layout="@layout/footer"/>
+            <include layout="@layout/footer" />
 
         </LinearLayout>
 
 
-
     </ScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/whatsapp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_marginBottom="510dp"
+        android:layout_marginEnd="8dp"
+
+        android:backgroundTint="#fff"
+        android:src="@drawable/whatsap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fb"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+
+        android:layout_marginBottom="68dp"
+        android:layout_marginStart="317dp"
+        android:backgroundTint="#fff"
+        android:src="@drawable/faceeee"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
     <!--<Button-->
         <!--android:id="@+id/whatsapp"-->
         <!--android:layout_width="50dp"-->
@@ -123,4 +161,4 @@
         <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
         <!--android:layout_marginLeft="16dp" />-->
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
