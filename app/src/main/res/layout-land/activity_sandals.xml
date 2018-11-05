@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
-    android:background="#f8fcf5"
+    android:background="#fff"
     android:orientation="vertical">
 
     <LinearLayout
@@ -42,31 +42,31 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:background="#c7c5c2"
+android:layout_marginTop="5dp"
+            android:background="#fff"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+            <!--<TextView-->
+                <!--android:id="@+id/title"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
 
 
-                android:layout_marginTop="5dp"
-                android:background="@drawable/border1"
-                android:gravity="center"
-                android:text="Category"
-                android:textAllCaps="true"
-                android:textColor="#fff"
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:background="@drawable/border1"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Category"-->
+                <!--android:textAllCaps="true"-->
+                <!--android:textColor="#fff"-->
 
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                <!--android:textSize="24sp"-->
+                <!--android:textStyle="bold" />-->
 
 
             <ImageView
                 android:id="@+id/sandalmen"
                 android:layout_width="match_parent"
-                android:layout_height="290dp"
+                android:layout_height="310dp"
 
                 android:layout_marginTop="30dp"
 
@@ -79,7 +79,7 @@
                 android:layout_height="330dp"
 
 
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
 
                 android:scaleType="centerCrop"
                 android:src="@drawable/sadlewomen" />
@@ -96,8 +96,9 @@
         android:layout_marginBottom="303dp"
         android:layout_marginEnd="8dp"
 
+        android:background="#fff"
         android:backgroundTint="#fff"
-        android:src="@drawable/whatsap"
+        android:src="@drawable/whatsaaap"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -112,8 +113,10 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="65dp"
-        android:layout_marginStart="525dp"
+        android:layout_marginStart="580dp"
         android:backgroundTint="#fff"
+
+        android:background="#fff"
         android:src="@drawable/faceeee"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

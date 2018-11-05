@@ -25,10 +25,13 @@ public class Formal extends AppCompatActivity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         //Remove notification bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_all__products__design);
+
         setContentView(R.layout.activity_formal);
 
         Toolbar toolbar=(Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -38,6 +41,8 @@ public class Formal extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
+
         ImageView bbb=(ImageView)findViewById(R.id.bag);
         bbb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +51,7 @@ public class Formal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         ImageView men=(ImageView)findViewById(R.id.formalmen);
         men.setOnClickListener(new View.OnClickListener() {
             @Override

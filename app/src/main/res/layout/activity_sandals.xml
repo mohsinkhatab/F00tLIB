@@ -2,7 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#f8fcf5"
+    android:background="#fff"
 android:id="@+id/cons"
     android:layout_width="match_parent"
     android:orientation="vertical"
@@ -42,26 +42,26 @@ android:id="@+id/cons"
             android:id="@+id/lay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
+android:layout_marginTop="35dp"
             android:layout_below="@+id/toolbar"
             android:background="#fff"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+            <!--<TextView-->
+                <!--android:id="@+id/title"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
 
 
-                android:layout_marginTop="5dp"
-                android:background="@drawable/border1"
-                android:gravity="center"
-                android:text="Category"
-                android:textAllCaps="true"
-                android:textColor="#fff"
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:background="@drawable/border1"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Category"-->
+                <!--android:textAllCaps="true"-->
+                <!--android:textColor="#fff"-->
 
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                <!--android:textSize="24sp"-->
+                <!--android:textStyle="bold" />-->
 
 
             <ImageView
@@ -80,7 +80,7 @@ android:id="@+id/cons"
                 android:layout_height="200dp"
 
 
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
 
                 android:scaleType="centerCrop"
                 android:src="@drawable/sadlewomen" />
@@ -94,11 +94,12 @@ android:id="@+id/cons"
         android:layout_width="50dp"
         android:layout_height="50dp"
 
-        android:layout_marginBottom="510dp"
+        android:layout_marginBottom="585dp"
         android:layout_marginEnd="8dp"
 
+        android:background="#fff"
         android:backgroundTint="#fff"
-        android:src="@drawable/whatsap"
+        android:src="@drawable/whatsaaap"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -109,9 +110,11 @@ android:id="@+id/cons"
         android:layout_height="50dp"
 
 
-        android:layout_marginBottom="68dp"
-        android:layout_marginStart="317dp"
+        android:layout_marginBottom="67dp"
+        android:layout_marginStart="300dp"
         android:backgroundTint="#fff"
+
+        android:background="#fff"
         android:src="@drawable/faceeee"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

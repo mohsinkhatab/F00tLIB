@@ -2,12 +2,18 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-        <item name="colorControlNormal">@color/white</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/darkblue</item>
+        <item name="colorPrimaryDark">@color/darkblue</item>
+        <item name="colorAccent">@color/darkblue</item>
+        <item name="android:statusBarColor">@color/darkblue</item>
+        <item name="android:navigationBarColor">@color/darkblue</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
 
     </style>
+
     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
-        <item name="spinBars">true</item>
-        <item name="color">@color/white</item>
+        <item name="color">@color/darkblue</item>
     </style>
 </resources>

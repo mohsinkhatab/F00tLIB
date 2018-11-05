@@ -26,15 +26,15 @@ public class Casual extends AppCompatActivity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         //Remove notification bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_all__products__design);
+
         setContentView(R.layout.casual);
 
         Toolbar tool=(Toolbar)findViewById(R.id.toolbar);
 
 
-//setSupportActionBar(tool);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setDisplayShowTitleEnabled(false);
+         setSupportActionBar(tool);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         tool.setNavigationOnClickListener(new View.OnClickListener() {
 
@@ -43,6 +43,8 @@ public class Casual extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
+
         ImageView mnmn=(ImageView)findViewById(R.id.bag);
         mnmn.setOnClickListener(new View.OnClickListener() {
             @Override

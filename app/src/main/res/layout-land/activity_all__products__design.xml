@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f8fcf5"
+    android:background="#fff"
     android:orientation="vertical"
 
     >
@@ -41,7 +41,10 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/alltoolbar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteX="170dp"
         tools:layout_editor_absoluteY="68dp">
 
@@ -56,7 +59,7 @@
                 android:layout_height="165dp"
                 android:layout_marginEnd="2dp"
                 android:layout_marginRight="2dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -73,10 +76,10 @@
 
             </android.support.v7.widget.RecyclerView>
 
-            <include layout="@layout/footer" />
+
 
         </LinearLayout>
-
+        <include layout="@layout/footer" />
 
     </ScrollView>
 
@@ -89,7 +92,7 @@
         android:layout_marginEnd="8dp"
 
         android:backgroundTint="#fff"
-        android:src="@drawable/whatsap"
+        android:src="@drawable/whatsaaap"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -103,8 +106,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="65dp"
-        android:layout_marginStart="525dp"
+        android:layout_marginBottom="113dp"
+        android:layout_marginStart="580dp"
         android:backgroundTint="#fff"
         android:src="@drawable/faceeee"
         app:layout_constraintBottom_toBottomOf="parent"

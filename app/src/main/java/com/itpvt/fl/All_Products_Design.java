@@ -24,6 +24,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.bumptech.glide.Glide;
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -43,7 +44,7 @@ public class All_Products_Design extends AppCompatActivity implements BaseSlider
     RecyclerView.LayoutManager layoutManager;
     private ProgressDialog loading;
     String id, Title;
-    FloatingActionButton whatsapp;
+
     SliderLayout sliderLayout;
     HashMap<String, Integer> HashMapForURL ;
 int[] images={  R.drawable.baner, R.drawable.banneer, R.drawable.bannerr};
@@ -65,8 +66,19 @@ int[] images={  R.drawable.baner, R.drawable.banneer, R.drawable.bannerr};
 //        setContentView(R.layout.activity_all__products__design);
 //        TextView textView = (TextView) findViewById(R.id.textView4);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-//
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(All_Products_Design.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
        FloatingActionButton facebook=(FloatingActionButton) findViewById(R.id.fb);
@@ -86,18 +98,7 @@ int[] images={  R.drawable.baner, R.drawable.banneer, R.drawable.bannerr};
 //            }
 //        });
 //
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(All_Products_Design.this,MainActivity.class);
-                startActivity(intent);
-            }
-        });
 
 
 //        ImageView title=(ImageView)findViewById(R.id.title);
@@ -181,11 +182,7 @@ int[] images={  R.drawable.baner, R.drawable.banneer, R.drawable.bannerr};
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(All_Products_Design.this, My_Cart.class);
-//
-//
-
-
-                startActivity(intent);
+startActivity(intent);
             }
         });
 
@@ -193,7 +190,7 @@ int[] images={  R.drawable.baner, R.drawable.banneer, R.drawable.bannerr};
         id = intent.getStringExtra("id");
 
 
-        //   Glide.with(All_Products_Design.this).load(Title).into(title);
+//           Glide.with(All_Products_Design.this).load(Title).into(title);
 
         GetAllProducts();
         AddImagesUrlOnline();
@@ -284,7 +281,7 @@ int[] images={  R.drawable.baner, R.drawable.banneer, R.drawable.bannerr};
                     startActivity(i);
                     Toast.makeText(All_Products_Design.this, "Nothing is Available For Time Being", Toast.LENGTH_LONG).show();
                     finish();
-//                    onBackPressed();
+
                 }
 
             }
@@ -294,7 +291,7 @@ int[] images={  R.drawable.baner, R.drawable.banneer, R.drawable.bannerr};
                 loading.dismiss();
                 //  Log.e("Error",error.printStackTrace());
                 Toast.makeText(All_Products_Design.this.getApplicationContext(), "Network Error", Toast.LENGTH_SHORT).show();
-                onBackPressed();
+onBackPressed();
 
             }
         }

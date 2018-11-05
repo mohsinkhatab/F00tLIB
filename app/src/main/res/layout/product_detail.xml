@@ -93,21 +93,21 @@
         android:id="@+id/p_disc"
         android:layout_width="419dp"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/p_name"
         android:layout_alignStart="@+id/p_name"
         android:layout_below="@+id/p_name"
+
         android:layout_marginTop="5dp"
 
         android:layout_weight="1"
 
         android:fontFamily="@font/gotham_book"
 
+
         android:gravity="center"
-
-
         android:hint="Description"
         android:textColor="#063249"
-        android:textSize="18dp"
-        android:layout_alignLeft="@+id/p_name" />
+        android:textSize="18dp" />
 
 </LinearLayout>
 
@@ -148,7 +148,8 @@ android:layout_weight="1"
 
                         android:layout_marginRight="10dp"
                         android:textColor="#063249"
-                        android:layout_alignParentRight="true">>
+                        android:layout_alignParentRight="true">
+
 
                     </Spinner>
                 </LinearLayout>
@@ -318,7 +319,7 @@ android:layout_marginTop="3dp"
         android:layout_marginRight="10dp"
 
         android:fontFamily="@font/gotham_book"
-
+android:gravity="left"
         android:hint="N/A"
         android:textColor="#fff"
         android:textSize="20sp"
@@ -348,7 +349,7 @@ android:layout_marginTop="3dp"
                     android:gravity="center"
                     android:text="ADD TO CART"
                     android:textColor="#ffff"
-                    android:layout_marginLeft="85dp"
+                    android:layout_marginLeft="75dp"
                     android:layout_alignParentLeft="true" />
             </LinearLayout>
 
