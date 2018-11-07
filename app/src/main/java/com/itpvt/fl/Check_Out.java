@@ -288,7 +288,7 @@ count=(EditText)findViewById(R.id.couuu);
 //                           editor.clear();
 //                           editor.apply();
 //                           SharedPreferences settings = Check_Out.this.getSharedPreferences(Config.SHARED_PREF_CART, Context.MODE_PRIVATE);
-                           Intent intent =new Intent(Check_Out.this,MainActivity.class);
+                           Intent intent =new Intent(Check_Out.this,Nothing.class);
                            startActivity(intent);
                         }
                     });

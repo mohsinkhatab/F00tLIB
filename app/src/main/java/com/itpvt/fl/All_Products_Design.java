@@ -43,7 +43,7 @@ public class All_Products_Design extends AppCompatActivity implements BaseSlider
     Recycler_Adapter_All_Products_new adapter;
     RecyclerView.LayoutManager layoutManager;
     private ProgressDialog loading;
-    String id, Title;
+    String id, Title, p_id, p_type,p_quantity;
 
     SliderLayout sliderLayout;
     HashMap<String, Integer> HashMapForURL ;
@@ -254,15 +254,17 @@ startActivity(intent);
             public void onResponse(String response) {
                 try {
                     loading.dismiss();
+
                     JSONObject abc = new JSONObject(response);
                     int j = abc.length();
                     for (int i = j; i >= 1; i--) {
                         String num = String.valueOf(i);
                         JSONObject data = abc.getJSONObject(num);
-                        arrayList.add(new Products_pojo(data.getString("product_id"), data.getString("pro_name")
-                                , data.getString("img_url").replace("localhost", Config.ip), data.getString("sku")
-                                , data.getString("product_quantity"), data.getString("price").replace(".0000", "Rs")));
-
+                        if (!data.getString("type_id").equals("simple")) {
+                            arrayList.add(new Products_pojo(data.getString("product_id"), data.getString("pro_name")
+                                    , data.getString("img_url").replace("localhost", Config.ip), data.getString("sku")
+                                    , data.getString("product_quantity"), data.getString("price").replace(".0000", "Rs")));
+                        }
 
                     }
 
@@ -320,6 +322,21 @@ onBackPressed();
         startActivity(intent);
     }
 
-
-
+//
+//public void onResponse(String response){
+//
+//        try {
+//            JSONObject object = new JSONObject(response);
+//            p_type = object.getString("type_id");
+//            String p_quantity = object.getString("product_quantity");
+//            if (p_type.equals("simple") && !p_quantity.equals("0")){
+//
+//
+//
+//            }
+//        }
+//
+//
 }
+
+

@@ -43,33 +43,33 @@ android:id="@+id/formaltoool"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/linnn"
-android:layout_marginTop="25dp"
+android:layout_marginTop="10dp"
             android:background="#fff"
             android:orientation="vertical">
 
-            <!--<TextView-->
-                <!--android:id="@+id/title"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="50dp"-->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
 
 
-                <!--android:layout_marginTop="5dp"-->
-                <!--android:background="@drawable/border1"-->
-                <!--android:gravity="center"-->
-                <!--android:text="Category"-->
-                <!--android:textAllCaps="true"-->
-                <!--android:textColor="#fff"-->
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="Formal"
+                android:textAllCaps="true"
+                android:textColor="#063249"
 
-                <!--android:textSize="24sp"-->
-                <!--android:textStyle="bold" />-->
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
 
             <ImageView
                 android:id="@+id/formalmen"
                 android:layout_width="match_parent"
-                android:layout_height="210dp"
+                android:layout_height="230dp"
 
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
 
                 android:scaleType="centerCrop"
                 android:src="@drawable/formalmen" />
@@ -80,7 +80,7 @@ android:layout_marginTop="25dp"
                 android:layout_height="190dp"
 
 
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="5dp"
 
                 android:scaleType="centerCrop"
                 android:src="@drawable/formalwomen" />

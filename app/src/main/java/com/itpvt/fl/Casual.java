@@ -82,7 +82,7 @@ Intent intent=new Intent(Casual.this,Sub_Categories.class);
         whatsapp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//
+
                 String smsNumber = "923113668542";
 
                 Intent sendIntent = new Intent("android.intent.action.MAIN");

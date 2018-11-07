@@ -42,26 +42,26 @@ android:id="@+id/cons"
             android:id="@+id/lay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-android:layout_marginTop="35dp"
+android:layout_marginTop="10dp"
             android:layout_below="@+id/toolbar"
             android:background="#fff"
             android:orientation="vertical">
 
-            <!--<TextView-->
-                <!--android:id="@+id/title"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="50dp"-->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
 
 
-                <!--android:layout_marginTop="5dp"-->
-                <!--android:background="@drawable/border1"-->
-                <!--android:gravity="center"-->
-                <!--android:text="Category"-->
-                <!--android:textAllCaps="true"-->
-                <!--android:textColor="#fff"-->
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="Sandal and Slipper"
+                android:textAllCaps="true"
+                android:textColor="#063249"
 
-                <!--android:textSize="24sp"-->
-                <!--android:textStyle="bold" />-->
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
 
             <ImageView
@@ -69,7 +69,7 @@ android:layout_marginTop="35dp"
                 android:layout_width="match_parent"
                 android:layout_height="190dp"
 
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
 
                 android:scaleType="centerCrop"
                 android:src="@drawable/sadlemen" />
@@ -80,7 +80,7 @@ android:layout_marginTop="35dp"
                 android:layout_height="200dp"
 
 
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="5dp"
 
                 android:scaleType="centerCrop"
                 android:src="@drawable/sadlewomen" />

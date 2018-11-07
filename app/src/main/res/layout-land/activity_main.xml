@@ -72,7 +72,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="5dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/sandals" />
+                android:src="@drawable/saaandal" />
 
             <ImageView
                 android:id="@+id/img5"

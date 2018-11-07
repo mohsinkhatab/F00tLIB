@@ -84,7 +84,7 @@
 
                 android:layout_marginTop="10dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/sandals" />
+                android:src="@drawable/saaandal" />
 
             <ImageView
                 android:id="@+id/img5"

@@ -177,6 +177,7 @@ android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:text="Color"
                     android:textColor="#063249"
+
                     android:layout_alignParentLeft="true" />
 
                 <Spinner
@@ -194,6 +195,53 @@ android:layout_marginLeft="10dp"
                     android:layout_toRightOf="@+id/textView" />
 
 </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tqty"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linearLayout2"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+
+                    android:text="Total Quantity"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#063249"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tedit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_below="@+id/linearLayout2"
+                    android:layout_toEndOf="@+id/qty"
+                    android:background="@drawable/border"
+                    android:paddingLeft="10dp"
+                    android:textSize="15sp"
+                    android:layout_marginRight="13dp"
+                    android:textColor="#063249"
+                    android:inputType="number"
+
+
+
+
+                    />
+
+
+
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

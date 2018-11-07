@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -46,7 +47,7 @@ public class ProductDetails extends AppCompatActivity {
     private ProgressDialog loading;
     String P_id, sku;
     TextView name, tv_aval, tv_price, tv_disprice, p_description, pname;
-    String p_type;
+    String p_type,p_size="",p_color="";
     String quantity1, orig, disco;
     String Image_Url = null;
     EditText ed_qty;
@@ -64,7 +65,9 @@ public class ProductDetails extends AppCompatActivity {
     String atr_id2, atr_id;
     ArrayList<Spinner_attribute_Pojo> arrayListcolor = new ArrayList<>();
     ArrayList<Spinner_attribute_Pojo> arrayListsize = new ArrayList<>();
-//    ImageView whatsapp;
+    ImageView whatsapp;
+    boolean checked,firsttime;
+    TextView txt;
 
 
     @Override
@@ -83,10 +86,12 @@ public class ProductDetails extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         ImageView bag=(ImageView)findViewById(R.id.bag);
         setSupportActionBar(toolbar);
-        ImageView whatsapp=(ImageView)findViewById(R.id.whatsapp);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        checked=false;
+        firsttime=false;
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 
@@ -94,6 +99,7 @@ public class ProductDetails extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(ProductDetails.this,MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -102,17 +108,10 @@ public class ProductDetails extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(ProductDetails.this,My_Cart.class);
                 startActivity(intent);
+                finish();
             }
         });
-//        whatsapp.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Uri uri  = Uri.parse("smsto:"+"+923000225587");
-//                Intent intent =new Intent(Intent.ACTION_SENDTO,uri);
-//                intent.setPackage("com.whatsapp");
-//                startActivity(intent);
-//            }
-//        });
+
 
         final Intent intent = getIntent();
         P_id = intent.getStringExtra("product_id");
@@ -129,8 +128,10 @@ public class ProductDetails extends AppCompatActivity {
         tv_disprice = (TextView) findViewById(R.id.p_disc);
         p_description=(TextView)findViewById(R.id.dprice);
         Buy = (Button) findViewById(R.id.pbtn);
-        whatsapp=(ImageView) findViewById(R.id.whatsapp);
+         txt= (TextView) findViewById(R.id.tedit);
+
 //        sizechart = (Button) findViewById(R.id.sizechart);
+
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,69 +157,52 @@ public class ProductDetails extends AppCompatActivity {
                 SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_CART, Context.MODE_PRIVATE);
                 cart_no = sharedPreferences.getString(Config.SHARED_PREF_CART_NO, null);
 
-                if (cart_no == null) {
-                    if (p_type.equals("configurable")) {
-                        if (!color_name.equals("") && !size_name.equals("")) {
-                            Build_Sku = sku + "-" + color_name + "-" + size_name;
-                           ChekgivenQuantity();
-                        //   ADDTOCART();
-                        } else if (!color_name.equals("") && size_name.equals("")) {
-                            Build_Sku = sku + "-" + color_name;
-                            ChekgivenQuantity();
-                          //ADDTOCART();
-                        } else if (color_name.equals("") && !size_name.equals("")) {
-                            Build_Sku = sku + "-" + size_name;
-                           ChekgivenQuantity();
-                           //ADDTOCART();
-                        } else if (color_name.equals("") && size_name.equals("")) {
-                            Build_Sku = sku;
-                           ChekgivenQuantity();
-                        }
+                given = Float.valueOf(quantity1);
+                enter = Float.valueOf(ed_qty.getText().toString());
+                if(enter>given){
 
-                    } else {
-                        given = Float.valueOf(quantity1);
-                        enter = Float.valueOf(ed_qty.getText().toString());
-                        if (given >= enter) {
+                    Toast.makeText(getApplicationContext(), "Please Reduce The Quantity", Toast.LENGTH_SHORT).show();
+
+
+
+                }
+
+               else {
+                    if (cart_no == null) {
+                        if (p_type.equals("configurable")) {
                             ADDTOCART();
-                        } else
+                        } else {
+                            given = Float.valueOf(quantity1);
+                            enter = Float.valueOf(ed_qty.getText().toString());
+                            if (given >= enter) {
+                                ADDTOCART();
+                            } else
 
-                        {
-                            Toast.makeText(getApplicationContext(), "Please Reduce The Quantity", Toast.LENGTH_SHORT).show();}
-                    }
-
-
-                } else {
-                    // agr ha wo to sb kch dekh k add kro product ko
-                    if (p_type.equals("configurable")) {
-                        if (!color_name.equals("") && !size_name.equals("")) {
-                            Build_Sku = sku + "-" + color_name + "-" + size_name;
-                            ChekgivenQuantity_2();
-//                            ADDTOCART();
-                        } else if (!color_name.equals("") && size_name.equals("")) {
-                            Build_Sku = sku + "-" + color_name;
-                            ChekgivenQuantity_2();
-  //                          ADDTOCART();
-                        } else if (color_name.equals("") && !size_name.equals("")) {
-                            Build_Sku = sku + "-" + size_name;
-                            ChekgivenQuantity_2();
-    //                        ADDTOCART();
-                        } else if (color_name.equals("") && !size_name.equals("")) {
-                            Build_Sku = sku;
-                            ChekgivenQuantity();
+                            {
+                                Toast.makeText(getApplicationContext(), "Please Reduce The Quantity", Toast.LENGTH_SHORT).show();
+                            }
                         }
-                    } else {
-                        given = Float.valueOf(quantity1);
-                        enter = Float.valueOf(ed_qty.getText().toString());
-                        if (given >= enter) {
-                            ADDTOCARTWITHCARTNO();
-                        } else
 
-                        {
-                            Toast.makeText(getApplicationContext(), "Please Reduce The Quantity", Toast.LENGTH_SHORT).show();
+                    } else {
+                        if (p_type.equals("configurable")) {
+                            ADDTOCARTWITHCARTNO();
+                        } else {
+                            given = Float.valueOf(quantity1);
+                            enter = Float.valueOf(ed_qty.getText().toString());
+                            if (given >= enter) {
+                                ADDTOCARTWITHCARTNO();
+                            } else
+
+                            {
+                                Toast.makeText(getApplicationContext(), "Please Reduce The Quantity", Toast.LENGTH_SHORT).show();
+                            }
                         }
                     }
                 }
+//
+
             }
+
         });
 
         s_size.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -227,6 +211,13 @@ public class ProductDetails extends AppCompatActivity {
                 Spinner_attribute_Pojo country = (Spinner_attribute_Pojo) parent.getSelectedItem();
                 value_indexc = country.getValue_index().toString();
                 size_name = country.getLabel().toString();
+                if (checked)
+                {
+                if (!p_size.equals(size_name))
+                {
+                    BUILDSKU();
+                }
+                }
 
             }
 
@@ -257,6 +248,17 @@ public class ProductDetails extends AppCompatActivity {
                 Spinner_attribute_Pojo country = (Spinner_attribute_Pojo) parent.getSelectedItem();
                 value_indexs = country.getValue_index().toString();
                 color_name = country.getLabel().toString();
+                if (!firsttime)
+                {
+                    BUILDSKU();
+                }
+                if (checked)
+                {
+                if (!p_color.equals(color_name))
+                {
+                    BUILDSKU();
+                }
+                }
 //                Toast.makeText(context, "Country ID: "+country.getId()+",  Country Name : "+country.getName(), Toast.LENGTH_SHORT).show();
             }
 
@@ -305,7 +307,7 @@ public class ProductDetails extends AppCompatActivity {
                     if (p_quantity.equals("0")) {
 //                      tv_aval.setText("Out Of Stock");
                         tv_aval.setText("Out Of Stock");
-                        tv_aval.setTextColor(R.color.red);
+                        tv_aval.setTextColor(R.color.colorAccent);
                         Buy.setEnabled(false);
                         ed_qty.setVisibility(View.GONE);
                         s_color.setVisibility(View.GONE);
@@ -315,7 +317,7 @@ public class ProductDetails extends AppCompatActivity {
                         Buy.setEnabled(true);
                         s_color.setVisibility(View.VISIBLE);
                         s_size.setVisibility(View.VISIBLE);
-                     //   spinners.setVisibility(View.VISIBLE);
+//                       spinners.setVisibility(View.VISIBLE);
                         ed_qty.setVisibility(View.VISIBLE);
                         productifConfigure();
                         // ed_qty.setVisibility(View.GONE);
@@ -323,7 +325,7 @@ public class ProductDetails extends AppCompatActivity {
                         ed_qty.setEnabled(true);
                         s_color.setVisibility(View.GONE);
                         s_size.setVisibility(View.GONE);
-                   //     spinners.setVisibility(View.GONE);
+                        spinners.setVisibility(View.GONE);
 //                        tv_qty.setText(quantity1);
                     }
 
@@ -357,10 +359,61 @@ public class ProductDetails extends AppCompatActivity {
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         requestQueue.add(request);
+
     }
 
 
     ////////////////////////ADD TO CART ON EXISTING ORDER//////////////////////////
+
+    private void BUILDSKU()
+    {
+
+        if (cart_no == null) {
+            if (p_type.equals("configurable")) {
+                if (!color_name.equals("") && !size_name.equals("")) {
+                    Build_Sku = sku + "-" + color_name + "-" + size_name;
+                    ChekgivenQuantity();
+
+                    //   ADDTOCART();
+                } else if (!color_name.equals("") && size_name.equals("")) {
+                    Build_Sku = sku + "-" + color_name;
+                    ChekgivenQuantity();
+                    //ADDTOCART();
+                } else if (color_name.equals("") && !size_name.equals("")) {
+                    Build_Sku = sku + "-" + size_name;
+                    ChekgivenQuantity();
+                    //ADDTOCART();
+                } else if (color_name.equals("") && size_name.equals("")) {
+                    Build_Sku = sku;
+                    ChekgivenQuantity();
+                }
+
+            }
+
+
+
+        } else {
+            // agr ha wo to sb kch dekh k add kro product ko
+            if (p_type.equals("configurable")) {
+                if (!color_name.equals("") && !size_name.equals("")) {
+                    Build_Sku = sku + "-" + color_name + "-" + size_name;
+                    ChekgivenQuantity_2();
+//                            ADDTOCART();
+                } else if (!color_name.equals("") && size_name.equals("")) {
+                    Build_Sku = sku + "-" + color_name;
+                    ChekgivenQuantity_2();
+                    //                          ADDTOCART();
+                } else if (color_name.equals("") && !size_name.equals("")) {
+                    Build_Sku = sku + "-" + size_name;
+                    ChekgivenQuantity_2();
+                    //                        ADDTOCART();
+                } else if (color_name.equals("") && !size_name.equals("")) {
+                    Build_Sku = sku;
+                    ChekgivenQuantity_2();
+                }
+            }
+        }
+    }
     private void ADDTOCARTWITHCARTNO() {
         loading = ProgressDialog.show(this, "Adding...", "Please Wait...", false, false);
         StringRequest request = new StringRequest(Request.Method.POST, Config.URL_ADD_TO_CART, new Response.Listener<String>() {
@@ -438,11 +491,12 @@ public class ProductDetails extends AppCompatActivity {
                                 android.R.layout.simple_spinner_dropdown_item, arrayListcolor);
                         s_color.setPrompt("Color");
                         s_color.setAdapter(adapter);
+//                        BUILDSKU();
 
                         //s_color.setSelection(adapter.getPosition(myItem));//Optional to set the selected item.
 
 
-                    } else if (atr_id.equals("144")) {
+                    } else if (atr_id.equals("134")) {
                         JSONArray value = attribute1.getJSONArray("values");
                         for (int j = 0; j < value.length(); j++) {
                             JSONObject data = value.getJSONObject(j);
@@ -458,6 +512,7 @@ public class ProductDetails extends AppCompatActivity {
                                 android.R.layout.simple_spinner_dropdown_item, arrayListsize);
                         s_size.setPrompt("Size");
                         s_size.setAdapter(adapter);
+//                        BUILDSKU();
 
                     }
 
@@ -480,9 +535,10 @@ public class ProductDetails extends AppCompatActivity {
                                 android.R.layout.simple_spinner_dropdown_item, arrayListcolor);
                         s_color.setPrompt("Color");
                         s_color.setAdapter(adapter);
+//                        BUILDSKU();
 
 
-                    } else if (atr_id2.equals("144")) {
+                    } else if (atr_id2.equals("134")) {
                         JSONArray value = attribute2.getJSONArray("values");
                         for (int j = 0; j < value.length(); j++) {
                             JSONObject data = value.getJSONObject(j);
@@ -496,7 +552,9 @@ public class ProductDetails extends AppCompatActivity {
                         s_size.setPrompt("Size");
                         s_size.setAdapter(adapter);
 
+
                     }
+
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -538,15 +596,23 @@ public class ProductDetails extends AppCompatActivity {
                     JSONArray quantyCOnfig = main.getJSONArray("Qunatity");
                     JSONObject data = quantyCOnfig.getJSONObject(0);
                     quantity1 = data.getString("qty");
-                    given = Float.valueOf(quantity1);
-                    enter = Float.valueOf(ed_qty.getText().toString());
-                    if (given >= enter) {
-                        ADDTOCARTWITHCARTNO();
-                    } else
+//                    given = Float.valueOf(quantity1);
+//                    enter = Float.valueOf(ed_qty.getText().toString());
+//                    if (given >= enter) {
+//
+//                    } else
 
+                   // {
+                    txt.setText(quantity1);
+                    p_size=size_name;
+                    p_color=color_name;
+                    firsttime=true;
+                    if (!checked)
                     {
-                        Toast.makeText(getApplicationContext(), "Please Reduce The Quantity Amount Available =" + quantity1, Toast.LENGTH_SHORT).show();
+                        checked=true;
                     }
+
+                        // }
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Toast.makeText(getApplicationContext(), "This Product is Out of stock", Toast.LENGTH_SHORT).show();
@@ -635,13 +701,20 @@ public class ProductDetails extends AppCompatActivity {
                     quantity1 = data.getString("qty");
                     given = Float.valueOf(quantity1);
                     enter = Float.valueOf(ed_qty.getText().toString());
-                    if (given >= enter) {
-                        ADDTOCART();
-                    } else
+//                    if (given >= enter) {
+//
+//                    } else
+//
+//                    {
 
-                    {
-                        Toast.makeText(getApplicationContext(), "Please Reduce The Quantity Amount Available= " + quantity1, Toast.LENGTH_LONG).show();
-                    }
+
+                    txt.setText(quantity1);
+                    p_size=size_name;
+                    p_color=color_name;
+                    checked=true;
+                    firsttime=true;
+                        // }
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
