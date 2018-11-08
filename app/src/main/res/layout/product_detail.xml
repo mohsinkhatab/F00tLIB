@@ -232,7 +232,7 @@ android:layout_marginLeft="10dp"
                     android:paddingLeft="10dp"
                     android:textSize="15sp"
                     android:layout_marginRight="13dp"
-                    android:textColor="#000"
+                    android:textColor="#063249"
                     android:inputType="number"
 
 

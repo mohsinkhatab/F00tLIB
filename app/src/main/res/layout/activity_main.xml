@@ -57,7 +57,7 @@
                 android:layout_marginTop="10dp"
 
                 android:scaleType="centerCrop"
-                android:src="@drawable/newin" />
+                android:src="@drawable/newiiin" />
 
             <ImageView
                 android:id="@+id/img2"
@@ -84,7 +84,7 @@
 
                 android:layout_marginTop="10dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/saaandal" />
+                android:src="@drawable/saaaaannnn" />
 
             <ImageView
                 android:id="@+id/img5"
@@ -92,7 +92,7 @@
                 android:layout_height="210dp"
                 android:layout_marginTop="10dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/saless" />
+                android:src="@drawable/salalala" />
 
             <include layout="@layout/footer" />
 

@@ -290,8 +290,8 @@ public class ProductDetails extends AppCompatActivity {
                     JSONArray quantity = object.getJSONArray("Qunatity");
                     JSONObject data = quantity.getJSONObject(0);
                     quantity1 = data.getString("qty");
-                    orig = object.getString("price").replace(".0000","Rs");;
-                    disco = object.getString("discount_price").replace(".0000","Rs");;
+                    orig = object.getString("price").replace(".0000"," Rs");;
+                    disco = object.getString("discount_price").replace(".0000"," Rs");;
                     tv_disprice.setText(object.getString("des"));
                     Image_Url = object.getString("id");
 
