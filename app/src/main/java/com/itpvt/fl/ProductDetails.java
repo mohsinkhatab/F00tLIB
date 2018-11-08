@@ -496,7 +496,7 @@ public class ProductDetails extends AppCompatActivity {
                         //s_color.setSelection(adapter.getPosition(myItem));//Optional to set the selected item.
 
 
-                    } else if (atr_id.equals("134")) {
+                    } else if (atr_id.equals("144")) {
                         JSONArray value = attribute1.getJSONArray("values");
                         for (int j = 0; j < value.length(); j++) {
                             JSONObject data = value.getJSONObject(j);
@@ -538,7 +538,7 @@ public class ProductDetails extends AppCompatActivity {
 //                        BUILDSKU();
 
 
-                    } else if (atr_id2.equals("134")) {
+                    } else if (atr_id2.equals("144")) {
                         JSONArray value = attribute2.getJSONArray("values");
                         for (int j = 0; j < value.length(); j++) {
                             JSONObject data = value.getJSONObject(j);

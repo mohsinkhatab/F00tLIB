@@ -122,12 +122,13 @@
                         android:layout_width="185dp"
                         android:layout_height="35dp"
 
-                        android:textStyle="bold"
+
                         android:layout_alignParentTop="true"
 android:layout_weight="1"
                         android:fontFamily="@font/gotham_book"
                         android:gravity="center"
                         android:text="Size"
+                        android:textStyle="bold"
                         android:layout_marginTop="5dp"
                         android:textColor="#063249"
                         android:layout_marginLeft="10dp"/>
@@ -169,7 +170,7 @@ android:layout_weight="1"
                     android:layout_width="185dp"
                     android:layout_height="35dp"
                     android:layout_alignParentStart="true"
-                    android:textStyle="bold"
+
                     android:layout_alignParentTop="true"
                     android:layout_weight="1"
 android:layout_marginLeft="10dp"
@@ -177,6 +178,7 @@ android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:text="Color"
                     android:textColor="#063249"
+                    android:textStyle="bold"
 
                     android:layout_alignParentLeft="true" />
 
@@ -230,7 +232,7 @@ android:layout_marginLeft="10dp"
                     android:paddingLeft="10dp"
                     android:textSize="15sp"
                     android:layout_marginRight="13dp"
-                    android:textColor="#063249"
+                    android:textColor="#000"
                     android:inputType="number"
 
 

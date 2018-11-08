@@ -67,9 +67,9 @@ android:layout_marginTop="10dp"
             <ImageView
                 android:id="@+id/sandalmen"
                 android:layout_width="match_parent"
-                android:layout_height="190dp"
+                android:layout_height="210dp"
 
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
 
                 android:scaleType="centerCrop"
                 android:src="@drawable/sadlemen" />
@@ -77,10 +77,10 @@ android:layout_marginTop="10dp"
             <ImageView
                 android:id="@+id/sandalwomen"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="210dp"
 
 
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
 
                 android:scaleType="centerCrop"
                 android:src="@drawable/sadlewomen" />
@@ -94,8 +94,8 @@ android:layout_marginTop="10dp"
         android:layout_width="50dp"
         android:layout_height="50dp"
 
-        android:layout_marginBottom="585dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="67dp"
+        android:layout_marginEnd="302dp"
 
         android:background="#fff"
         android:backgroundTint="#fff"
@@ -111,10 +111,10 @@ android:layout_marginTop="10dp"
 
 
         android:layout_marginBottom="67dp"
-        android:layout_marginStart="300dp"
-        android:backgroundTint="#fff"
-
+        android:layout_marginStart="302dp"
         android:background="#fff"
+
+        android:backgroundTint="#fff"
         android:src="@drawable/faceeee"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

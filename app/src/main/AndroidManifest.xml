@@ -32,6 +32,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ProductDetails"/>
         <activity android:name=".Nothing" />
         <activity android:name=".ItemRemoved" />
         <activity android:name=".Casual" />

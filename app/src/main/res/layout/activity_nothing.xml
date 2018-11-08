@@ -22,29 +22,33 @@
 
         android:gravity="center"
         android:padding="10dp"
-        android:src="@drawable/orderdone"
+        android:src="@drawable/orderrrr"
 
 
         />
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_above="@+id/not"
-    android:layout_centerHorizontal="true"
-    android:text="Order Done"
-    android:background="@drawable/border"
-    android:fontFamily="@font/gotham_book"
-    android:textSize="25sp"
-    android:layout_marginBottom="50dp"
-    android:textColor="#063249"
-    />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/not"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/gotham_book"
+        android:text="Order Done"
+        android:textColor="#063249"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
     <Button
         android:id="@+id/not"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="173dp"
+        android:layout_marginBottom="134dp"
         android:background="@drawable/border1"
         android:padding="10dp"
         android:text="Click Here \nFor Home Page"
