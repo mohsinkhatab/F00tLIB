@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/nothtool"/>
+
+
+    <ImageView
+        android:id="@+id/textView5"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_above="@+id/not"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="105dp"
+
+
+        android:gravity="center"
+        android:padding="10dp"
+        android:src="@drawable/nodata"
+
+
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/not"
+
+     android:layout_marginLeft="45dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="30dp"
+
+        android:background="@drawable/border"
+        android:fontFamily="@font/gotham_book"
+        android:text="There Is  Nothing For Being Time"
+        android:textColor="#063249"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/not"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="134dp"
+        android:background="@drawable/border1"
+        android:padding="10dp"
+        android:text="Click Here For  \nMore Categories"
+        android:textColor="#fff" />
+</RelativeLayout>
+

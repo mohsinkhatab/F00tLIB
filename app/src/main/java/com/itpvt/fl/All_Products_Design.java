@@ -279,7 +279,7 @@ startActivity(intent);
 
                     loading.dismiss();
 
-                    Intent i= new Intent(All_Products_Design.this,Nothing.class);
+                    Intent i= new Intent(All_Products_Design.this,none.class);
                     startActivity(i);
                     Toast.makeText(All_Products_Design.this, "Nothing is Available For Time Being", Toast.LENGTH_LONG).show();
                     finish();

@@ -382,7 +382,8 @@ android:gravity="left"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp">
 
                 <Button
                     android:id="@+id/pbtn"
@@ -399,7 +400,7 @@ android:gravity="left"
                     android:gravity="center"
                     android:text="ADD TO CART"
                     android:textColor="#ffff"
-                    android:layout_marginLeft="75dp"
+                    android:layout_marginLeft="60dp"
                     android:layout_alignParentLeft="true" />
             </LinearLayout>
 

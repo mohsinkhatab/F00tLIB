@@ -32,12 +32,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProductDetails"/>
+        <activity android:name=".ProductDetails" />
         <activity android:name=".Nothing" />
         <activity android:name=".ItemRemoved" />
         <activity android:name=".Casual" />
         <activity android:name=".Formal" />
-        <activity android:name=".Sandals"></activity>
+        <activity android:name=".Sandals" />
+        <activity android:name=".none"></activity>
     </application>
 
 </manifest>
