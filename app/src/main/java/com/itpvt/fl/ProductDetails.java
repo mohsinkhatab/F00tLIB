@@ -596,14 +596,14 @@ public class ProductDetails extends AppCompatActivity {
                     JSONArray quantyCOnfig = main.getJSONArray("Qunatity");
                     JSONObject data = quantyCOnfig.getJSONObject(0);
                     quantity1 = data.getString("qty");
-//                    given = Float.valueOf(quantity1);
-//                    enter = Float.valueOf(ed_qty.getText().toString());
+                    given = Float.valueOf(quantity1);
+                 enter = Float.valueOf(ed_qty.getText().toString());
 //                    if (given >= enter) {
 //
 //                    } else
 
                    // {
-                    txt.setText(quantity1);
+                    txt.setText(quantity1.replace(".0000", " "));
                     p_size=size_name;
                     p_color=color_name;
                     firsttime=true;

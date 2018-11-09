@@ -356,7 +356,7 @@ android:textStyle="bold"
                 android:layout_height="50dp"
                 android:layout_marginLeft="35dp"
                 android:layout_marginRight="35dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="18dp"
                 android:layout_weight="1"
                 android:background="@drawable/border1"
                 android:fontFamily="@font/gotham_book"
@@ -390,21 +390,20 @@ android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="2dp"
+                    android:textStyle="bold"
+android:textColor="#063249"
                     android:text="ORDER ID:"
 
-                    android:textColor="#063249"
-                    android:textSize="16sp"
-
-                    android:textStyle="bold" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/code"
-                    android:layout_width="11dp"
+                    android:textStyle="bold"
 
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#938553"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textSize="16sp" />
 
             </LinearLayout>
 

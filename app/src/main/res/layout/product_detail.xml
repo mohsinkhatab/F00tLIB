@@ -186,7 +186,7 @@ android:layout_marginLeft="10dp"
                     android:id="@+id/spinner_color"
                     android:layout_width="185dp"
                     android:layout_height="35dp"
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="12dp"
                     android:layout_alignParentTop="true"
                     android:textColor="#063249"
 
@@ -400,7 +400,7 @@ android:gravity="left"
                     android:gravity="center"
                     android:text="ADD TO CART"
                     android:textColor="#ffff"
-                    android:layout_marginLeft="60dp"
+                    android:layout_marginLeft="40dp"
                     android:layout_alignParentLeft="true" />
             </LinearLayout>
 
