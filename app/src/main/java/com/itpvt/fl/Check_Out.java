@@ -235,7 +235,7 @@ count=(EditText)findViewById(R.id.couuu);
 
         //Showing the alert dialog
         AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.DKGRAY));
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color. LTGRAY ));
         alertDialog.show();
 
     }

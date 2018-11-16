@@ -57,8 +57,8 @@ public class My_Cart extends AppCompatActivity {
         setContentView(R.layout.activity_my__cart);
 
 
-        whatsapp=(ImageView) findViewById(R.id.whatsapp);
-        whatsapp=(ImageView) findViewById(R.id.whatsapp);
+//        whatsapp=(ImageView) findViewById(R.id.whatsapp);
+//        whatsapp=(ImageView) findViewById(R.id.whatsapp);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -66,7 +66,8 @@ public class My_Cart extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               onBackPressed();
+                Intent intent=new Intent(My_Cart.this,MainActivity.class);
+                startActivity(intent);
             }
         });
 ////        ImageView whatsapp=(ImageView) findViewById(R.id.whatsapp);

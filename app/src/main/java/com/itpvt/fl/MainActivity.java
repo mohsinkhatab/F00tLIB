@@ -1,6 +1,7 @@
 package com.itpvt.fl;
 
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -112,9 +113,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         facebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/footlib/"));
-//footlib_ready_to_wear
-                startActivity(myIntent);
+                Intent facebookIntent = openFacebook(MainActivity.this);
+                startActivity(facebookIntent);
             }
         });
 //        textView.setOnClickListener(new View.OnClickListener() {
@@ -256,4 +256,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public static Intent openFacebook(Context context) {
+
+        try {
+            context.getPackageManager()
+                    .getPackageInfo("com.facebook.katana", 0);
+            return new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("fb://page/1192767844126708?referrer=app_link"));
+        } catch (Exception e) {
+
+            return new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://www.facebook.com/footlib/"));
+        }
+
+    }
+
 }

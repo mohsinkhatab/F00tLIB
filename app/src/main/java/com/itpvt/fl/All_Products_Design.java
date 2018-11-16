@@ -2,6 +2,7 @@ package com.itpvt.fl;
 
 import android.app.ProgressDialog;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -43,11 +44,12 @@ public class All_Products_Design extends AppCompatActivity implements BaseSlider
     Recycler_Adapter_All_Products_new adapter;
     RecyclerView.LayoutManager layoutManager;
     private ProgressDialog loading;
-    String id, Title, p_id, p_type,p_quantity;
+    String id, Title, p_id, p_type, p_quantity;
 
     SliderLayout sliderLayout;
-    HashMap<String, Integer> HashMapForURL ;
-int[] images={  R.drawable.baner, R.drawable.banneer, R.drawable.bannerr};
+    HashMap<String, Integer> HashMapForURL;
+    int[] images = {R.drawable.baner, R.drawable.banneer, R.drawable.bannerr};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +60,7 @@ int[] images={  R.drawable.baner, R.drawable.banneer, R.drawable.bannerr};
         setContentView(R.layout.activity_all__products__design);
 
 
-       sliderLayout= (SliderLayout) findViewById(R.id.slider);
+        sliderLayout = (SliderLayout) findViewById(R.id.slider);
 //Adapter adapter= new Adapter(this);
 //viewpg.setAdapter(adapter);
         //Remove notification bar
@@ -80,16 +82,17 @@ int[] images={  R.drawable.baner, R.drawable.banneer, R.drawable.bannerr};
         });
 
 
-
-       FloatingActionButton facebook=(FloatingActionButton) findViewById(R.id.fb);
+        FloatingActionButton facebook = (FloatingActionButton) findViewById(R.id.fb);
 
         facebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/footlib/"));
-                startActivity(myIntent);
+                Intent facebookIntent = openFacebook(All_Products_Design.this);
+                startActivity(facebookIntent);
             }
         });
+
+
 //        textView.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -98,7 +101,6 @@ int[] images={  R.drawable.baner, R.drawable.banneer, R.drawable.bannerr};
 //            }
 //        });
 //
-
 
 
 //        ImageView title=(ImageView)findViewById(R.id.title);
@@ -136,11 +138,13 @@ int[] images={  R.drawable.baner, R.drawable.banneer, R.drawable.bannerr};
 //                startActivity(myIntent);
 //            }
 //        });
-     FloatingActionButton   whatsapp = (FloatingActionButton) findViewById(R.id.whatsapp);
+
+
+        FloatingActionButton whatsapp = (FloatingActionButton) findViewById(R.id.whatsapp);
         whatsapp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//
+
                 String smsNumber = "923113668542";
 
                 Intent sendIntent = new Intent("android.intent.action.MAIN");
@@ -182,7 +186,7 @@ int[] images={  R.drawable.baner, R.drawable.banneer, R.drawable.bannerr};
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(All_Products_Design.this, My_Cart.class);
-startActivity(intent);
+                startActivity(intent);
             }
         });
 
@@ -201,6 +205,7 @@ startActivity(intent);
     public void onSliderClick(BaseSliderView slider) {
 
     }
+
     private void AddImagesUrlOnline()
 
     {
@@ -214,9 +219,10 @@ startActivity(intent);
         callSlider();
 
     }
+
     private void callSlider() {
 
-        for(String name : HashMapForURL.keySet()){
+        for (String name : HashMapForURL.keySet()) {
 
             TextSliderView textSliderView = new TextSliderView(All_Products_Design.this.getApplicationContext());
 
@@ -229,7 +235,7 @@ startActivity(intent);
             textSliderView.bundle(new Bundle());
 
             textSliderView.getBundle()
-                    .putString("extra",name);
+                    .putString("extra", name);
 
             sliderLayout.addSlider(textSliderView);
         }
@@ -238,11 +244,6 @@ startActivity(intent);
         sliderLayout.setCustomAnimation(new DescriptionAnimation());
         sliderLayout.setDuration(8000);
     }
-
-
-
-
-
 
 
     private void GetAllProducts() {
@@ -274,12 +275,9 @@ startActivity(intent);
                     e.printStackTrace();
 
 
-
-
-
                     loading.dismiss();
 
-                    Intent i= new Intent(All_Products_Design.this,none.class);
+                    Intent i = new Intent(All_Products_Design.this, none.class);
                     startActivity(i);
                     Toast.makeText(All_Products_Design.this, "Nothing is Available For Time Being", Toast.LENGTH_LONG).show();
                     finish();
@@ -293,7 +291,7 @@ startActivity(intent);
                 loading.dismiss();
                 //  Log.e("Error",error.printStackTrace());
                 Toast.makeText(All_Products_Design.this.getApplicationContext(), "Network Error", Toast.LENGTH_SHORT).show();
-onBackPressed();
+                onBackPressed();
 
             }
         }
@@ -322,6 +320,19 @@ onBackPressed();
         startActivity(intent);
     }
 
+
+    public static Intent openFacebook(Context context) {
+
+        try {
+            context.getPackageManager()
+                    .getPackageInfo("com.facebook.katana", 0);
+            return new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("fb://page/1192767844126708?referrer=app_link"));
+        } catch (Exception e) {
+
+            return new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://www.facebook.com/footlib/"));
+        }
 //
 //public void onResponse(String response){
 //
@@ -337,6 +348,7 @@ onBackPressed();
 //        }
 //
 //
+    }
 }
 
 

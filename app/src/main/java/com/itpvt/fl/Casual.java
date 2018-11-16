@@ -1,6 +1,7 @@
 package com.itpvt.fl;
 
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -98,14 +99,26 @@ Intent intent=new Intent(Casual.this,Sub_Categories.class);
         facebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/footlib/"));
-                startActivity(myIntent);
+                Intent facebookIntent = openFacebook(Casual.this);
+                startActivity(facebookIntent);
             }
         });
 
 
     }
 
+    public static Intent openFacebook(Context context) {
 
+        try {
+            context.getPackageManager()
+                    .getPackageInfo("com.facebook.katana", 0);
+            return new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("fb://page/1192767844126708?referrer=app_link"));
+        } catch (Exception e) {
 
+            return new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://www.facebook.com/footlib/"));
+        }
+
+    }
 }

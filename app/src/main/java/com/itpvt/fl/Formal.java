@@ -1,6 +1,7 @@
 package com.itpvt.fl;
 
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -95,8 +96,8 @@ public class Formal extends AppCompatActivity {
         facebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/footlib/"));
-                startActivity(myIntent);
+                Intent facebookIntent = openFacebook(Formal.this);
+                startActivity(facebookIntent);
             }
         });
 
@@ -108,5 +109,20 @@ public class Formal extends AppCompatActivity {
     public void onBackPressed() {
         Intent intent=new Intent(Formal.this,MainActivity.class);
         startActivity(intent);
+    }
+
+    public static Intent openFacebook(Context context) {
+
+        try {
+            context.getPackageManager()
+                    .getPackageInfo("com.facebook.katana", 0);
+            return new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("fb://page/1192767844126708?referrer=app_link"));
+        } catch (Exception e) {
+
+            return new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://www.facebook.com/footlib/"));
+        }
+
     }
 }

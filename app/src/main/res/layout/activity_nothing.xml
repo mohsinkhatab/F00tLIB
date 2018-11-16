@@ -8,7 +8,9 @@
     >
 
 <include layout="@layout/toolbar"
-    android:id="@+id/nothtool"/>
+    android:id="@+id/nothtool"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"/>
 
 
     <ImageView
