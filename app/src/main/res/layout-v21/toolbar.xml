@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
 
-    android:background="#f8fcf5"
-
+    android:background="#fff"
+android:elevation="10dp"
     android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
@@ -14,8 +14,9 @@
 
 
         <ImageView
-            android:layout_width="170dp"
+            android:layout_width="140dp"
             android:layout_height="58dp"
+            android:layout_marginRight="40dp"
             android:layout_gravity="left"
             android:layout_weight="3"
             android:layout_marginTop="3dp"
@@ -26,19 +27,14 @@
             android:layout_width="60dp"
             android:layout_height="40dp"
             android:layout_gravity="right"
+            android:backgroundTint="#fff"
 android:layout_marginRight="20dp"
             android:layout_weight="20"
-            android:src="@drawable/shoppinggg"
-            android:backgroundTint="#fff"/>
+            android:elevation="5dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/shoppinggg" />
 
-        <!--<ImageView-->
-            <!--android:id="@+id/whatsapp"-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="38dp"-->
-            <!--android:layout_gravity="right"-->
-            <!--android:src="@drawable/newgree"-->
 
-            <!--/>-->
 
 
     </android.support.v7.widget.Toolbar>
