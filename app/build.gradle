@@ -30,9 +30,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
 
-    implementation 'com.android.volley:volley:1.0.0'
+
     compile 'com.daimajia.slider:library:1.1.5@aar'
     compile 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.android.volley:volley:1.0.0'
     compile 'com.squareup.picasso:picasso:2.3.2'
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.github.bumptech.glide:glide:3.8.0'
