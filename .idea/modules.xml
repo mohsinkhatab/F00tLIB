@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://D:\FL\F00tLIB.iml" filepath="D:\FL\F00tLIB.iml" />
-      <module fileurl="file://$PROJECT_DIR$/FL.iml" filepath="$PROJECT_DIR$/FL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/F00tLIB.iml" filepath="$PROJECT_DIR$/F00tLIB.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

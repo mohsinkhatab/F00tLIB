@@ -17,43 +17,37 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
+
             android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/p_image"
-                android:layout_width="305dp"
-                android:layout_height="340dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="1dp" />
-
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginBottom="5dp"
                 android:weightSum="2">
 
 
                 <TextView
                     android:id="@+id/p_name"
                     android:layout_width="200dp"
-                    android:layout_height="50dp"
+                    android:layout_height="35dp"
                     android:layout_margin="1dp"
                     android:layout_weight="1"
+                    android:background="@drawable/tool"
 
 
                     android:fontFamily="@font/gotham_book"
 
                     android:gravity="center"
-
+android:layout_marginTop="5dp"
                     android:hint="Product Name"
 
                     android:textColor="#063249"
@@ -65,16 +59,17 @@
 
                     android:id="@+id/p_aval"
                     android:layout_width="200dp"
-                    android:layout_height="50dp"
+                    android:layout_height="35dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignTop="@+id/p_name"
                     android:layout_weight="1"
-
+android:layout_marginTop="1dp"
                     android:fontFamily="@font/gotham_book"
                     android:gravity="center"
+                    android:background="@drawable/tool"
 
                     android:hint="Availability"
-                    android:paddingTop="10dp"
+
                     android:textColor="#063249"
                     android:textSize="20dp"
                     android:layout_alignParentRight="true" />
@@ -83,7 +78,41 @@
 
 
             </LinearLayout>
-<LinearLayout
+
+            <ImageView
+                android:id="@+id/p_image"
+                android:layout_width="305dp"
+                android:layout_height="340dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="1dp" />
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+
+                >
+
+
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+
+                >
+            <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:weightSum="1"
@@ -100,6 +129,7 @@
         android:layout_marginTop="5dp"
 
         android:layout_weight="1"
+        android:background="@drawable/tool"
 
         android:fontFamily="@font/gotham_book"
 
@@ -110,8 +140,18 @@
         android:textSize="18dp" />
 
 </LinearLayout>
+            </android.support.v7.widget.CardView>
 
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
 
+                >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -122,7 +162,8 @@
                         android:layout_width="185dp"
                         android:layout_height="35dp"
 
-
+                        android:background="@drawable/tool"
+android:layout_marginBottom="2dp"
                         android:layout_alignParentTop="true"
 android:layout_weight="1"
                         android:fontFamily="@font/gotham_book"
@@ -139,14 +180,15 @@ android:layout_weight="1"
                         android:layout_width="185dp"
 
 
+                        android:background="@drawable/tool"
 
                         android:layout_height="35dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentTop="true"
                         android:layout_weight="1"
-                        android:layout_marginTop="3dp"
-                        android:background="@drawable/border"
-
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:gravity="center"
                         android:layout_marginRight="10dp"
                         android:textColor="#063249"
                         android:layout_alignParentRight="true">
@@ -154,10 +196,20 @@ android:layout_weight="1"
 
                     </Spinner>
                 </LinearLayout>
+            </android.support.v7.widget.CardView>
 
 
 
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
 
+                >
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -179,73 +231,151 @@ android:layout_marginLeft="10dp"
                     android:text="Color"
                     android:textColor="#063249"
                     android:textStyle="bold"
-
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/tool"
+android:layout_marginBottom="2dp"
                     android:layout_alignParentLeft="true" />
 
                 <Spinner
                     android:id="@+id/spinner_color"
                     android:layout_width="185dp"
                     android:layout_height="35dp"
+
+                    android:layout_alignParentTop="true"
+                    android:textColor="#063249"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toEndOf="@+id/textView"
+                    android:layout_weight="1"
+                    android:background="@drawable/tool"
+
+                    android:layout_toRightOf="@+id/textView" />
+
+</LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="3dp"-->
+                <!--android:weightSum="2"-->
+               <!--android:layout_marginLeft="10dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tqty"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="35dp"-->
+                    <!--android:layout_alignParentStart="true"-->
+                    <!--android:layout_below="@+id/linearLayout2"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/border"-->
+                    <!--android:gravity="center"-->
+
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:textSize="15sp"-->
+
+                    <!--android:text="Total Quantity"-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:textColor="#063249"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_alignParentLeft="true" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tedit"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_below="@+id/linearLayout2"-->
+                    <!--android:layout_marginRight="13dp"-->
+                    <!--android:layout_toEndOf="@+id/qty"-->
+                    <!--android:layout_toRightOf="@+id/qty"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/border"-->
+                    <!--android:inputType="number"-->
+                    <!--android:paddingLeft="10dp"-->
+                    <!--android:paddingTop="3dp"-->
+                    <!--android:textColor="#063249"-->
+
+
+                    <!--android:textSize="15sp" />-->
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="3dp"
+                    android:weightSum="2"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tqty"
+                    android:layout_width="185dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/gotham_book"
+                    android:gravity="center"
+                    android:text="Total Quantity"
+                    android:textColor="#063249"
+                    android:textStyle="bold"
+                    android:background="@drawable/tool"
+
+                    android:layout_alignParentLeft="true"
+                    />
+                <TextView
+                    android:id="@+id/tedit"
+                    android:layout_width="185dp"
+                    android:layout_height="match_parent"
                     android:paddingLeft="10dp"
                     android:layout_alignParentTop="true"
                     android:textColor="#063249"
 
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/border"
+                    android:paddingTop="5dp"
+
                     android:layout_toEndOf="@+id/textView"
                     android:layout_weight="1"
-                    android:layout_toRightOf="@+id/textView" />
+                    android:background="@drawable/tool"
 
-</LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:weightSum="2"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tqty"
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/linearLayout2"
-                    android:layout_weight="1"
-                    android:background="@drawable/border"
-                    android:gravity="center"
-
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp"
-
-                    android:text="Total Quantity"
-                    android:layout_marginRight="5dp"
-                    android:textColor="#063249"
-                    android:textStyle="bold" />
-                <TextView
-                    android:id="@+id/tedit"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_below="@+id/linearLayout2"
-                    android:layout_toEndOf="@+id/qty"
-                    android:background="@drawable/border"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="3dp"
-                    android:textSize="15sp"
-                    android:layout_marginRight="13dp"
-                    android:textColor="#063249"
+                    android:layout_toRightOf="@+id/textView"
                     android:inputType="number"
-
 
 
 
                     />
 
+                </LinearLayout>
 
+            </android.support.v7.widget.CardView>
 
+            <!--</LinearLayout>-->
 
-            </LinearLayout>
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
 
+                >
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -255,22 +385,25 @@ android:layout_marginLeft="10dp"
 
                 <TextView
                     android:id="@+id/qty"
-                    android:layout_width="185dp"
+                    android:layout_width="160dp"
                     android:layout_height="35dp"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/linearLayout2"
-                    android:layout_weight="1"
+
+                    android:layout_alignParentTop="true"
+
+                    android:layout_marginLeft="10dp"
                     android:fontFamily="@font/gotham_book"
                     android:gravity="center"
                     android:text="Quantity"
                     android:textColor="#063249"
                     android:textStyle="bold"
-                    android:layout_marginLeft="10dp"
-                    android:layout_alignParentLeft="true" />
+                    android:background="@drawable/tool"
+android:layout_marginBottom="2dp"
+                    android:layout_alignParentLeft="true"  />
 
                 <EditText
                     android:id="@+id/pedit"
-                    android:layout_width="185dp"
+                    android:layout_width="175dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
                     android:layout_below="@+id/linearLayout2"
@@ -278,18 +411,32 @@ android:layout_marginLeft="10dp"
                     android:background="@drawable/border1"
                     android:paddingLeft="10dp"
                     android:hint="1"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="28dp"
                     android:textColor="#fff"
+
+
                     android:inputType="number"
+
 
                     android:text="1"
                     android:layout_toRightOf="@+id/qty" />
 
             </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
 
+                >
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
 android:layout_marginTop="3dp"
                 android:orientation="horizontal">
                 <TextView
@@ -297,7 +444,7 @@ android:layout_marginTop="3dp"
                     android:layout_width="185dp"
 
                     android:layout_height="35dp"
-
+android:layout_marginTop="1dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_weight="1"
@@ -306,6 +453,8 @@ android:layout_marginTop="3dp"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
                     android:text="Original Price"
+                    android:background="@drawable/tool"
+android:layout_marginBottom="2dp"
                     android:textColor="#063249"
                     android:textColorHint="#FFFF5656"
                     android:layout_alignParentLeft="true" />
@@ -321,19 +470,35 @@ android:layout_marginTop="3dp"
                     android:layout_alignParentEnd="true"
                     android:layout_weight="1"
 
+android:layout_marginTop="3dp"
+                    android:paddingTop="3dp"
 
+                    android:layout_toRightOf="@+id/textView8"
                     android:text="Price"
                     android:paddingLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="5dp"
                     android:textColor="#fff"
                     android:textSize="20sp"
+                    android:layout_marginBottom="4dp"
                     android:layout_alignParentRight="true" />
 
             </LinearLayout>
-<LinearLayout
-    android:layout_width="wrap_content"
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+
+                >
+            <LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="3dp"
+
     android:orientation="horizontal">
 
 
@@ -344,17 +509,19 @@ android:layout_marginTop="3dp"
 
         android:layout_height="35dp"
 
+
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView8"
-        android:layout_marginBottom="4dp"
-        android:layout_marginTop="3dp"
+        android:layout_alignParentTop="true"
         android:layout_weight="1"
         android:fontFamily="@font/gotham_book"
         android:gravity="center"
-        android:text="Discount"
-        android:layout_marginLeft="10dp"
-        android:textColor="#063249"
         android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:text="Discount"
+        android:background="@drawable/tool"
+android:layout_marginTop="7dp"
+        android:textColor="#063249"
+        android:textColorHint="#FFFF5656"
         android:layout_alignParentLeft="true" />
     <TextView
         android:id="@+id/dprice"
@@ -366,11 +533,13 @@ android:layout_marginTop="3dp"
         android:layout_alignParentEnd="true"
         android:layout_weight="1"
         android:background="@drawable/border1"
-        android:paddingLeft="9dp"
-        android:layout_marginRight="10dp"
-
+android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:layout_marginRight="5dp"
+     android:layout_marginBottom="9dp"
         android:fontFamily="@font/gotham_book"
-android:gravity="left"
+        android:paddingTop="3dp"
+
         android:hint="N/A"
         android:textColor="#fff"
         android:textSize="20sp"
@@ -378,32 +547,34 @@ android:gravity="left"
 
 </LinearLayout>
 
+            </android.support.v7.widget.CardView>
 
-            <LinearLayout
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
+         android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="40dp">
 
                 <Button
                     android:id="@+id/pbtn"
-                    android:layout_width="220dp"
+                    android:layout_width="280dp"
                     android:layout_height="50dp"
+
+                    android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginStart="92dp"
-                    android:layout_marginTop="10dp"
-                    android:textAlignment="center"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="57dp"
+                    android:layout_marginStart="57dp"
                     android:background="@drawable/border1"
                     android:fontFamily="@font/gotham_book"
                     android:gravity="center"
                     android:text="ADD TO CART"
-                    android:textColor="#ffff"
-                    android:layout_marginLeft="40dp"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                    android:textAlignment="center"
+                    android:textColor="#ffff" />
+            </RelativeLayout>
+
 
 
         </LinearLayout>

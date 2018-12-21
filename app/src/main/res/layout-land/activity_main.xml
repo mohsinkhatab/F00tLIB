@@ -98,14 +98,16 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
 
-        android:layout_marginBottom="65dp"
-        android:layout_marginEnd="570dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="500dp"
 
+        android:layout_marginTop="8dp"
         android:background="#fff"
         android:backgroundTint="#fff"
         android:src="@drawable/whatsaaap"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fb" />
 
 
     <android.support.design.widget.FloatingActionButton
@@ -117,15 +119,12 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="65dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="570dp"
+        android:layout_marginEnd="36dp"
 
         android:background="#fff"
         android:backgroundTint="#fff"
         android:src="@drawable/faceeee"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteY="245dp" />
 
 </android.support.constraint.ConstraintLayout>

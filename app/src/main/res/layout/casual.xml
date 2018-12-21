@@ -41,6 +41,19 @@
 android:layout_marginTop="10dp"
             android:background="#fff"
             android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+
+                >
+
 
             <TextView
                 android:id="@+id/title"
@@ -58,32 +71,59 @@ android:layout_marginTop="10dp"
 
                 android:textSize="24sp"
                 android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="16dp"
 
 
+                >
             <ImageView
                 android:id="@+id/casualmen"
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
 
-                android:layout_marginTop="15dp"
 
+android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/casualmen" />
+            </android.support.v7.widget.CardView>
+
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="16dp"
+
+
+                >
 
             <ImageView
                 android:id="@+id/casualwomen"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-
+                android:layout_height="190dp"
 
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
 
                 android:scaleType="centerCrop"
                 android:src="@drawable/casualwomen" />
+            </android.support.v7.widget.CardView>
 
             <include layout="@layout/footer"
-                android:layout_marginTop="20dp"
+
                />
+
         </LinearLayout>
     </ScrollView>
 
@@ -97,7 +137,7 @@ android:layout_marginTop="10dp"
         android:layout_marginEnd="302dp"
 
         android:background="#fff"
-        android:backgroundTint="#fff"
+        app:backgroundTint="#fff"
         android:src="@drawable/whatsaaap"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -112,7 +152,7 @@ android:layout_marginTop="10dp"
         android:layout_marginBottom="63dp"
         android:layout_marginStart="302dp"
         android:background="#fff"
-        android:backgroundTint="#fff"
+        app:backgroundTint="#fff"
         android:src="@drawable/faceeee"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
